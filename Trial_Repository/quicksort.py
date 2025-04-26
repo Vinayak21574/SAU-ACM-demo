@@ -3,7 +3,7 @@ def quicksort(arr):
         return arr
     else:
         pivot = arr[0]
-        left = [x for x in arr[1:] if x < pivot]  # Bug: equal elements not handled
+        left = [x for x in arr[1:] if x <= pivot]  # Bug: equal elements not handled
         right = [x for x in arr[1:] if x > pivot]
         return quicksort(left) + [pivot] + quicksort(right)
 
